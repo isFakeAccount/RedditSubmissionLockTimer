@@ -46,7 +46,7 @@ def main():
             for submission in submission_stream:
                 if submission is None:
                     break
-                submission_flair = submission.link_flair_text.lower()
+                submission_flair = submission.link_flair_text.lower().strip()
                 timer_value = -1
                 try:
                     if 'min' in submission_flair:
